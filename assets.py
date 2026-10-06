@@ -31,7 +31,7 @@ class Assets:
     def __init__(self, root=None):
         self.root = Path(root) if root else Path(__file__).resolve().parent
         self.hero_archer = self.load('images/Actor1_5.png', height=190)
-        self.hero_sword = self.load('sv_enemies/Swordsman.png', height=190)
+        self.hero_sword = self.load('characters/Swordsman.png', height=190)
         self.icon_hero = self.load('images/Actor1_5a.png', height=38)
         self.icon_arrow = self.load('images/arrow3.png', height=28)
         self.icon_mage = self.load('images/Mage2.png', height=36)
@@ -45,15 +45,15 @@ class Assets:
         self.ice = self.load('images/ice3.png', width=74)
 
         self.villains = {
-            'mage': self.load('sv_enemies/Mage.png', height=200),
-            'ice_witch': self.load('sv_enemies/Actor2_6.png', height=200),
+            'mage': self.load('characters/Mage.png', height=200),
+            'ice_witch': self.load('characters/Actor2_6.png', height=200),
             'vampire': pygame.transform.flip(
-                self.load('sv_enemies/Vampire.png', height=200), True, False
+                self.load('characters/Vampire.png', height=200), True, False
             ),
             'demon': pygame.transform.flip(
-                self.load('sv_enemies/Demon.png', height=220), True, False
+                self.load('characters/Demon.png', height=220), True, False
             ),
-            'darklord': self.load('sv_enemies/Darklord.png', height=230),
+            'darklord': self.load('characters/Darklord.png', height=230),
         }
 
         self.anim_hit = self.slice_sheet('animations/Hit1.png', size=96)
